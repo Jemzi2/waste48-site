@@ -1,0 +1,14 @@
+# Waste48
+
+> Digital waste tracking software for permitted waste receiving sites in England. Records every load received, checks it against Defra's digital waste tracking rules, has it approved by the site, and files the receipt of waste with Defra inside the statutory window — keeping the evidence and the waste tracking ID against the load.
+
+## Facts
+- Waste48 is listed on GOV.UK's "Report receipt of waste: choose a software provider" page. That page states Defra has confirmed the listed providers meet the digital waste tracking requirements, and that buying software is at the buyer's own risk. Waste48 does not claim to be "Defra approved".
+- From October 2026 permitted waste receiving sites in England must report receipts of waste digitally. Carriers' own digital reporting duties begin in October 2027.
+- The reporting deadline is the end of the second working day after the load arrives.
+- Two AI assistants: Reg records the load; Vera checks it against Defra's rules and files it. Neither can do the other's job. All 14 of Defra's production approval test scenarios were submitted by Reg and Vera.
+- No weighbridge integration is needed to be compliant; a site can type the weight or upload its weighbridge export.
+- Contact: hello@waste48.co.uk
+
+## Pages
+- [Home](https://waste48.co.uk/): what Waste48 does, the October 2026 rules, how it works, the AI assistants, FAQ

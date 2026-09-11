@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Waste48 — Report receipt of waste to Defra, checked before it goes</title>
+<meta name="description" content="Waste48 records every load received at your site, checks it against Defra's digital waste tracking rules, and files the receipt inside the window — with the evidence kept. Listed on GOV.UK.">
+<link rel="canonical" href="https://waste48.co.uk/">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Waste48">
+<meta property="og:title" content="Waste48 — Every load reported to Defra. Checked before it goes.">
+<meta property="og:description" content="Digital waste tracking for receiving sites. Recorded, checked against Defra's rules, approved by your site, filed inside the window — with the evidence kept. Listed on GOV.UK.">
+<meta property="og:url" content="https://waste48.co.uk/">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Waste48 — Every load reported to Defra. Checked before it goes.">
+<meta name="twitter:description" content="Digital waste tracking for receiving sites in England. Listed on GOV.UK.">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Waste48", "url": "https://waste48.co.uk/", "email": "hello@waste48.co.uk", "areaServed": "GB", "description": "Digital waste tracking software for waste receiving sites in England. Listed on GOV.UK's 'Report receipt of waste: choose a software provider' page."}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Waste48", "url": "https://waste48.co.uk/", "applicationCategory": "BusinessApplication", "operatingSystem": "Web", "description": "Records every load received at a permitted waste site, checks it against Defra's digital waste tracking rules, has it approved by the site, and files the receipt of waste with Defra inside the statutory window — keeping the evidence and the waste tracking ID against the load.", "featureList": ["Receipt of waste filed to Defra's Receipt of Waste API", "Checked against Defra's rules before submission", "Human approval by the site before filing", "Statutory working-day clock", "Waste tracking ID stored against each load", "Evidence kept for every receipt"], "audience": {"@type": "BusinessAudience", "audienceType": "Permitted waste receiving sites in England"}, "provider": {"@type": "Organization", "name": "Waste48"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is a waste tracking ID?", "acceptedAnswer": {"@type": "Answer", "text": "The reference Defra issues when a receipt of waste is reported. One per movement. It is the site's proof that it recorded the load, and a carrier can quote it. Waste48 stores it against the load and only ever shows an ID Defra actually returned — \"filed\" means filed."}}, {"@type": "Question", "name": "Is it really 48 hours?", "acceptedAnswer": {"@type": "Answer", "text": "The rule is the end of the second working day after the load arrives. Over a weekend that is longer than 48 hours; on a Thursday afternoon it can be shorter than you think. Waste48 runs the statutory clock, not a fixed 48 — the name is a reminder, not the rule."}}, {"@type": "Question", "name": "Can I just use Defra's spreadsheet?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Defra provides a free receipt-of-waste template spreadsheet for sites that don't have API software — you download it, complete the mandatory fields, and upload it; you must use Defra's template, not your own, and a new one for each upload. It is on GOV.UK under Report receipt of waste, section \"Spreadsheet\".Where it stops being enough: nothing checks the rows before you upload, nothing tells you which load a rejection refers to, the waste tracking IDs come back separately from your records, and the working-day clock is yours to watch. Waste48 exists for the site that has tried that for a fortnight. If the template suits you, use it — that is an honest answer."}}, {"@type": "Question", "name": "Do I need my weighbridge connected?", "acceptedAnswer": {"@type": "Answer", "text": "No. You need the weight and the reference on the receipt. Type it, or upload the export your weighbridge software already produces. Connecting the weighbridge directly is a later conversation; it is not needed to be compliant."}}, {"@type": "Question", "name": "Why would Defra reject a receipt?", "acceptedAnswer": {"@type": "Answer", "text": "The commonest reasons: no carrier registration number, or hazardous waste with no consignment code. Both may be absent — but only with a reason stated on the receipt. Vera asks for the reason before the receipt can be sent, so the rejection never happens."}}, {"@type": "Question", "name": "Something turned up in a load that wasn't declared. Now what?", "acceptedAnswer": {"@type": "Answer", "text": "Attach it to the load it most likely came from, photograph it, and amend the receipt within the correction window. Waste48 keeps the original and the correction together with the reason. Declaring what you found protects the site; the duty to describe the waste correctly sits with whoever sent it."}}, {"@type": "Question", "name": "Who is liable — the carrier or the site?", "acceptedAnswer": {"@type": "Answer", "text": "From October 2026 the duty to report receipts sits with the receiving site. Carriers' own digital reporting duties begin in October 2027. Until then the site's receipt is the record — and it names the carrier."}}, {"@type": "Question", "name": "Is Waste48 \"Defra approved\"?", "acceptedAnswer": {"@type": "Answer", "text": "There is no such thing as Defra approval of a provider, and we won't say there is. Waste48 is listed on GOV.UK's Report receipt of waste: choose a software provider page, which states that Defra has confirmed the listed providers meet the digital waste tracking requirements. The same page says buying software is at your own risk. Choose on evidence; ours is above."}}]}</script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap">
+<style>
+:root{
+  --paper:#FFFFFF; --grey:#F3F2F1; --ink:#0B0C0C; --ink-2:#505A5F; --line:#B1B4B6;
+  --green:#00703C; --green-dark:#002D18; --link:#1D70B8; --link-dark:#003078; --focus:#FFDD00;
+  --body:"Source Sans 3","Helvetica Neue",Arial,sans-serif;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:19px;line-height:1.45}
+.wrap{max-width:1040px;margin:0 auto;padding-inline:20px}
+h1,h2,h3{margin:0;font-weight:700;line-height:1.08;text-wrap:balance}
+h1{font-size:clamp(38px,5.2vw,54px)}
+h2{font-size:clamp(28px,3.4vw,36px);margin-bottom:16px}
+h3{font-size:24px}
+p{margin:0}
+a{color:var(--link);text-decoration-thickness:1px;text-underline-offset:2px}
+a:hover{color:var(--link-dark);text-decoration-thickness:2px}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible{outline:3px solid var(--focus);outline-offset:0;box-shadow:0 0 0 6px var(--ink)}
+.lede{font-size:23px;line-height:1.35;max-width:36em}
+.btn{display:inline-block;background:var(--green);color:#fff;font-weight:700;font-size:20px;padding:11px 20px 9px;text-decoration:none;border:0;box-shadow:0 3px 0 var(--green-dark);cursor:pointer;line-height:1.2}
+.btn:hover{filter:brightness(.92);color:#fff}
+.inset{border-left:10px solid var(--line);padding:12px 18px;font-size:18px;max-width:40em}
+
+/* header */
+header{border-bottom:10px solid var(--green);padding-top:16px}
+.nav{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap}
+.brand{font-weight:700;font-size:30px;text-decoration:none;color:var(--ink);padding-bottom:14px;display:inline-flex;align-items:baseline;gap:10px}
+.brand small{font-weight:400;font-size:15px;color:var(--ink-2)}
+.brand:hover{color:var(--ink)}
+.nav ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap}
+.nav li a{display:block;padding:12px 16px;font-weight:600;font-size:17px;color:var(--green);text-decoration:none}
+.nav li a:hover{text-decoration:underline;color:var(--green)}
+.nav li.cta a{background:var(--green);color:#fff;padding-inline:18px}
+.nav li.cta a:hover{text-decoration:none;filter:brightness(.92)}
+
+/* hero */
+.hero{padding-block:44px 52px;display:grid;grid-template-columns:7fr 5fr;gap:40px;align-items:start}
+@media (max-width:860px){.hero{grid-template-columns:1fr}}
+.hero .txt{display:flex;flex-direction:column;gap:22px}
+.hero .cta{display:flex;gap:20px;align-items:center;flex-wrap:wrap}
+.kicker{font-size:17px;color:var(--ink-2)}
+
+/* receipt panel */
+.receipt{border:2px solid var(--ink);display:flex;flex-direction:column}
+.receipt .head{background:var(--ink);color:var(--paper);padding:12px 16px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;font-size:13px}
+.receipt dl{margin:0;display:grid;grid-template-columns:1fr 1fr;font-size:16px}
+.receipt dt,.receipt dd{margin:0;padding:12px 16px;border-bottom:1px solid var(--line)}
+.receipt dt{color:var(--ink-2)}
+.receipt dd{font-weight:700}
+.receipt dd.ok{color:var(--green)}
+.receipt dd.id{font-size:22px;letter-spacing:.06em}
+.receipt dt:last-of-type,.receipt dd:last-of-type{border-bottom:0}
+.receipt .foot{padding:8px 16px 12px;font-size:13px;color:var(--ink-2);border-top:1px solid var(--line)}
+
+/* facts band */
+.band{background:var(--green);color:#fff;border-top:1px solid var(--green-dark);border-bottom:1px solid var(--green-dark)}
+.band .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;padding-block:32px}
+@media (max-width:760px){.band .wrap{grid-template-columns:1fr;gap:24px}}
+.band b{display:block;font-weight:700;font-size:46px;line-height:1;font-variant-numeric:tabular-nums}
+.band p{margin-top:8px;font-size:17px;line-height:1.4}
+
+section{padding-block:48px}
+section+section{border-top:1px solid var(--line)}
+.two{display:grid;grid-template-columns:5fr 7fr;gap:40px;align-items:start}
+@media (max-width:860px){.two{grid-template-columns:1fr}}
+.two p{margin-top:14px;font-size:19px;line-height:1.5;max-width:36em}
+table.rules{border-collapse:collapse;width:100%;font-size:19px;border-top:3px solid var(--ink)}
+table.rules th,table.rules td{padding:12px 0;border-bottom:1px solid var(--line);vertical-align:top;text-align:left}
+table.rules th{width:110px;padding-right:16px}
+.note{margin-top:22px;border-left:10px solid var(--green);padding:12px 18px;font-size:18px;max-width:40em}
+
+/* steps */
+ol.steps{list-style:none;margin:0;padding:0;counter-reset:s;border-top:3px solid var(--ink)}
+ol.steps li{display:grid;grid-template-columns:56px 160px 1fr;gap:16px;padding:18px 0;border-bottom:1px solid var(--line)}
+ol.steps li::before{counter-increment:s;content:counter(s);font-weight:700;font-size:34px;line-height:1;color:var(--green)}
+ol.steps .who{font-size:15px;font-weight:600;color:var(--ink-2);text-transform:uppercase;letter-spacing:.04em;padding-top:8px}
+ol.steps h3{font-size:22px}
+ol.steps p{margin-top:6px;font-size:17px;line-height:1.5;max-width:38em}
+ol.steps li.mark h3{color:var(--green)}
+@media (max-width:640px){ol.steps li{grid-template-columns:44px 1fr}ol.steps .who{grid-column:2}}
+
+/* agents */
+.agents{display:grid;grid-template-columns:1fr 1fr;gap:40px;border-top:3px solid var(--ink);padding-top:20px}
+@media (max-width:720px){.agents{grid-template-columns:1fr}}
+.agent .name{font-weight:700;font-size:40px;line-height:1}
+.agent .role{font-size:15px;color:var(--ink-2);margin:4px 0 14px}
+.agent dl{margin:0;display:grid;grid-template-columns:80px 1fr;gap:8px 14px;font-size:17px;line-height:1.5}
+.agent dt{font-weight:700}
+.agent dd{margin:0}
+.agent dd.no{border-left:4px solid var(--ink);padding-left:12px}
+.record{margin-top:30px;border:3px solid var(--ink);display:grid;grid-template-columns:200px 1fr}
+.record .num{background:var(--green);color:#fff;padding:22px 20px;display:flex;flex-direction:column;justify-content:center;gap:6px;border-right:3px solid var(--ink)}
+.record .num b{font-size:60px;line-height:.95;font-variant-numeric:tabular-nums}
+.record .num span{font-size:13px;letter-spacing:.08em;text-transform:uppercase;font-weight:600}
+.record .txt{padding:20px 22px;display:flex;flex-direction:column;gap:10px}
+.record .txt h3{font-size:24px}
+.record .txt p{font-size:17px;line-height:1.5;max-width:40em}
+@media (max-width:640px){.record{grid-template-columns:1fr}.record .num{border-right:0;border-bottom:3px solid var(--ink);flex-direction:row;align-items:baseline;gap:14px}}
+
+/* proof */
+.proof{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;border-top:3px solid var(--ink);padding-top:20px}
+@media (max-width:820px){.proof{grid-template-columns:1fr}}
+.proof h3{font-size:22px;margin-bottom:8px}
+.proof p{font-size:17px;line-height:1.5}
+.gov{margin-top:28px;padding:18px 20px;background:var(--green);color:#fff;font-size:17px;max-width:44em;border-left:10px solid var(--green-dark)}
+.gov q{font-weight:600}
+.gov small{display:block;margin-top:6px;color:#fff;font-size:15px;opacity:.92}
+.gov a{color:#fff}
+
+/* fits */
+table.fits{border-collapse:collapse;width:100%;border-top:3px solid var(--ink)}
+table.fits th,table.fits td{padding:14px 0;border-bottom:1px solid var(--line);vertical-align:top;text-align:left}
+table.fits th{width:120px;font-size:15px;font-weight:600;text-transform:uppercase;letter-spacing:.04em;color:var(--green);padding-top:18px}
+table.fits th.soon{color:var(--ink-2)}
+table.fits h3{font-size:22px}
+table.fits p{margin-top:4px;font-size:17px;line-height:1.5;max-width:40em}
+
+/* form */
+.formgrid{display:grid;grid-template-columns:5fr 7fr;gap:40px;align-items:start}
+@media (max-width:860px){.formgrid{grid-template-columns:1fr}}
+form{display:grid;gap:20px;border-top:3px solid var(--ink);padding-top:20px}
+.f{display:flex;flex-direction:column;gap:6px}
+label{font-weight:600;font-size:17px}
+.hint{font-size:15px;color:var(--ink-2)}
+input,select,textarea{font-family:var(--body);font-size:19px;padding:8px 10px;border:2px solid var(--ink);background:var(--paper);color:var(--ink);min-height:44px;width:100%;border-radius:0}
+textarea{min-height:90px;resize:vertical}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media (max-width:520px){.pair{grid-template-columns:1fr}}
+.consent{display:flex;gap:12px;align-items:flex-start;font-size:17px}
+.consent input{width:28px;height:28px;min-height:0;flex:none;margin:0}
+.sent{display:none;border-left:10px solid var(--green);padding:12px 18px;font-size:17px}
+.sent.show{display:block}
+
+/* questions */
+.qa{border-top:3px solid var(--ink)}
+details{border-bottom:1px solid var(--line)}
+summary{list-style:none;cursor:pointer;font-weight:700;font-size:22px;padding:16px 0;color:var(--link);text-decoration:underline;text-underline-offset:3px}
+summary::-webkit-details-marker{display:none}
+details[open] summary{color:var(--ink);text-decoration:none}
+details p{padding:0 0 18px;font-size:19px;line-height:1.5;max-width:40em}
+details p+p{margin-top:-6px}
+
+footer{background:var(--paper);border-top:3px solid var(--ink);padding-block:28px 40px;font-size:16px;color:var(--ink-2)}
+footer .row{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+footer ul{list-style:none;margin:0;padding:0;display:flex;gap:20px;flex-wrap:wrap}
+footer .legal{margin-top:20px;max-width:80ch;display:flex;flex-direction:column;gap:6px;font-size:15px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top">Waste48 <small>Digital waste tracking for disposal sites</small></a>
+    <ul>
+      <li><a href="#october">What changes</a></li>
+      <li><a href="#how">How it files</a></li>
+      <li><a href="#agents">Reg and Vera</a></li>
+      <li><a href="#proof">Tested</a></li>
+      <li><a href="#faq">Questions</a></li>
+      <li class="cta"><a href="#team">Talk to the team</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="top">
+<div class="wrap hero">
+  <div class="txt">
+    <div class="kicker">Report receipt of waste · England · from October 2026</div>
+    <h1>Every load reported to Defra. Checked before it goes.</h1>
+    <p class="lede">Recorded, checked against Defra's rules, approved by your site, filed inside the window — with the evidence kept.</p>
+    <div class="cta"><a class="btn" href="#team">Get ready for October</a><a href="#how">See how a receipt is filed</a></div>
+    <p class="inset">Waste48 is listed on GOV.UK's <em>Report receipt of waste: choose a software provider</em> page. No weighbridge integration needed.</p>
+  </div>
+  <div class="receipt" role="img" aria-label="Example receipt of waste as filed in Waste48, with the waste tracking ID returned by Defra">
+    <div class="head">Receipt of waste · load 0417</div>
+    <dl>
+      <dt>Carrier reg</dt><dd>CBDU4••••2</dd>
+      <dt>EWC</dt><dd>17 09 04 · mixed C&amp;D</dd>
+      <dt>Net weight</dt><dd>4.62 t</dd>
+      <dt>Checked by Vera (AI)</dt><dd class="ok">Nothing to fix</dd>
+      <dt>Waste tracking ID</dt><dd class="id">26SEY3EE3</dd>
+    </dl>
+    <div class="foot">Example. Details fictional. IDs are issued by Defra when a receipt is filed.</div>
+  </div>
+</div>
+
+<div class="band">
+  <div class="wrap">
+    <div><b>14 of 14</b><p>Defra's production-approval test scenarios passed against Defra's own environment — hazardous and POPs included.</p></div>
+    <div><b>1 Sept 2026</b><p>Production credentials issued by Defra for the Receipt of Waste API.</p></div>
+    <div><b>None</b><p>Weighbridge integrations needed to be compliant. Type the ticket weight, or upload the export your weighbridge software already produces.</p></div>
+  </div>
+</div>
+
+<section id="october">
+  <div class="wrap two">
+    <div>
+      <h2>The disposal site records the load. Not the carrier.</h2>
+      <p>Digital waste tracking in England starts with the disposal site. When a load arrives, your site reports what it received and Defra returns a waste tracking ID. That ID is the record.</p>
+    </div>
+    <div>
+      <table class="rules">
+        <tr><th>Who</th><td>Permitted waste sites that receive waste — transfer stations, treatment sites, metal recyclers, skip yards, landfill, household waste recycling centres.</td></tr>
+        <tr><th>What</th><td>For each load: the carrier, the waste codes, the quantity, and any hazardous or POPs detail — sent to Defra as one receipt.</td></tr>
+        <tr><th>When</th><td>By the end of the second working day after the load arrives. Waste48 shows the clock on every unfiled receipt. We call it the 48.</td></tr>
+        <tr><th>If not</th><td>Non-reporting is a breach under the Digital Waste Tracking (England) Regulations 2026, with penalties and a public register of sanctions. The duty sits with the site — carriers' own reporting duties don't begin until October 2027.</td></tr>
+      </table>
+      <p class="note">Already reporting with another tool and it's slower than the paperwork it replaced? Switching means nothing to migrate — the records already live with Defra. <a href="#team">Talk to the team.</a></p>
+    </div>
+  </div>
+</section>
+
+<section id="how">
+  <div class="wrap">
+    <h2>Recorded, checked, approved, filed — in the time it takes to sign a transfer note.</h2>
+    <p class="lede" style="margin-bottom:26px;font-size:19px">Waste48 has two built-in AI assistants, and we gave them names so you know which one did what. <strong>Reg</strong> records each load and tells you what's missing. <strong>Vera</strong> checks the completed receipt against Defra's rules and sends it. Reg cannot send and Vera cannot change a record — that separation is built into the software, not left to habit. A person at your site can sit between them and approve every receipt.</p>
+    <ol class="steps">
+      <li><span class="who">Reg (AI) · on arrival</span><div><h3>Record the load</h3><p>Carrier registration, waste code, quantity, any hazardous or POPs detail. Typed in, or read from the weighbridge export. Anything missing is named in plain words — "no waste code on load 3".</p></div></li>
+      <li class="mark"><span class="who">Vera (AI) · before it goes</span><div><h3>Checked and verified by AI before submission</h3><p>Every receipt is checked against Defra's rules and against sense: does the code match the description, is the weight plausible for the container, is the carrier registered. Faults are named, never hidden.</p></div></li>
+      <li><span class="who">Your site · optional</span><div><h3>A person approves</h3><p>Turn on human review and nothing is sent until someone at your site taps approve. Every receipt, or only the ones Vera flags. Your record, your call.</p></div></li>
+      <li><span class="who">Defra</span><div><h3>Filed. ID stored against the load.</h3><p>Vera submits inside the window. Defra returns the waste tracking ID; it is kept with the load and its full history. No ID means not filed — and the load stays on your list until it is.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<section id="agents">
+  <div class="wrap">
+    <h2>Two AI assistants. One job each. Neither can do the other's.</h2>
+    <p class="lede" style="margin-bottom:26px;font-size:19px">They are software, not people — parts of Waste48 that we named so a receipt's history reads plainly: "Reg recorded it, Vera checked and sent it, Dave approved it." Here is what each one does and, just as important, what each one cannot do.</p>
+    <div class="agents">
+      <div class="agent">
+        <div class="name">Reg</div>
+        <div class="role">The recorder · Reg handles the regs</div>
+        <dl>
+          <dt>Does</dt><dd>Builds the record for each load as it arrives: carrier registration, waste codes, quantity, hazardous or POPs detail. Scores how complete it is and names what is missing in plain words. Takes typed entries and CSV uploads.</dd>
+          <dt>Never</dt><dd class="no">Sends anything to Defra. There is no route from Reg to Defra in the software. Never guesses a value — unknown stays unknown and is flagged. Never edits a record after it has been filed.</dd>
+        </dl>
+      </div>
+      <div class="agent">
+        <div class="name">Vera</div>
+        <div class="role">The verifier · from veritas, truth</div>
+        <dl>
+          <dt>Does</dt><dd>Checks the completed receipt against Defra's own rules and against sense — code matches description, weight plausible for the container, carrier registered. Sends it inside the window, stores the waste tracking ID that comes back, and keeps checking that everything sent was confirmed.</dd>
+          <dt>Never</dt><dd class="no">Creates or changes a load. Sends without your site's approval when human review is on. Sends the same load twice. Marks anything "filed" unless Defra returned an ID.</dd>
+        </dl>
+      </div>
+    </div>
+    <div class="record">
+      <div class="num"><b>14/14</b><span>Defra test scenarios</span></div>
+      <div class="txt">
+        <h3>Track record: every test Defra sets, passed by Reg and Vera.</h3>
+        <p>Before Defra lists a provider, its software must complete <strong>14 production-approval test scenarios</strong> against Defra's own integration environment. Reg recorded and Vera filed all 14 — hazardous, POPs, missing carrier registration, missing consignment codes included — with <strong>12 accepted and 2 correctly refused</strong> by Defra, exactly as the scenarios require.</p>
+        <p>Every one of the test records Defra asked for was submitted by Reg and Vera, and <strong>Defra listed Waste48 on that basis.</strong> The evidence of each run is kept, byte for byte.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="proof">
+  <div class="wrap">
+    <h2>Built with 30 years' experience in the waste industry.</h2>
+    <p class="lede" style="margin-bottom:26px;font-size:19px">Designed and tested by people with thirty years in the waste industry, so it works at the weighbridge as well as in the office.</p>
+    <div class="proof">
+      <div><h3>All fourteen scenarios. No exemptions.</h3><p>Before Defra lists a provider it must pass fourteen production-approval scenarios: normal loads, hazardous, POPs, missing carrier registration, missing consignment codes. Waste48 passed all fourteen against Defra's integration environment.</p></div>
+      <div><h3>An error in the rules, found before launch.</h3><p>Building against the published API rules, we identified an error in them. Defra confirmed it and corrected the national specification. We mention it only because that is the attention a legal record deserves.</p></div>
+      <div><h3>Every submission kept, byte for byte.</h3><p>What was sent, when, and what came back — stored unaltered. Corrections are new versions; the original is never overwritten. When an officer asks, the answer is a download, not a promise.</p></div>
+    </div>
+    <div class="gov">
+      <q>Defra has confirmed that the software providers below meet the digital waste tracking requirements.</q>
+      <small>GOV.UK, <em>Report receipt of waste: choose a software provider</em> — the page on which Waste48 is listed. The same page says buying software is at your own risk; Defra does not endorse individual providers.</small>
+    </div>
+  </div>
+</section>
+
+<section id="fits">
+  <div class="wrap">
+    <h2>Works with what you already have.</h2>
+    <table class="fits">
+      <tr><th>Available</th><td><h3>A site with no weighbridge software</h3><p>Record the load, type the weight from the ticket, file. Under a minute a load once you've done three.</p></td></tr>
+      <tr><th>Available</th><td><h3>A site that keeps its own spreadsheet</h3><p>Keep it in your own layout. Upload it to Waste48 — not to Defra — and Vera checks every row, files the ones that pass through the API, and tells you exactly which didn't and why.</p></td></tr>
+      <tr><th class="soon">Coming</th><td><h3>A site with a weighbridge and a printer</h3><p>Photograph the ticket and the weight and reference are read into the receipt for you to confirm before it goes. In development — not yet available.</p></td></tr>
+      <tr><th class="soon">Coming</th><td><h3>Permit headroom and sense checks</h3><p>Tonnage received against your permit's annual limits by stream, and a guided process when something arrives your permit doesn't cover. In development — not yet available.</p></td></tr>
+    </table>
+  </div>
+</section>
+
+<section id="team">
+  <div class="wrap formgrid">
+    <div>
+      <h2>A fifteen-minute walk-through.</h2>
+      <p class="lede" style="font-size:19px">Tell us about your site and the team will come back with a time. We'll file one receipt start to finish on your kind of load, and answer the October questions straight.</p>
+      <p class="hint" style="margin-top:16px">Pricing is agreed with the team, in writing, before anything is set up. Nothing on this page is a price.</p>
+      <p class="hint" style="margin-top:8px">Or email <a href="mailto:hello@waste48.co.uk">hello@waste48.co.uk</a>.</p>
+    </div>
+    <form id="early-access" novalidate>
+      <div class="pair">
+        <div class="f"><label for="f-name">Your name</label><input id="f-name" name="name" autocomplete="name" required></div>
+        <div class="f"><label for="f-role">Role at the site</label><span class="hint">Weighbridge, site manager, office…</span><input id="f-role" name="role"></div>
+      </div>
+      <div class="f"><label for="f-site">Site name</label><input id="f-site" name="site" required></div>
+      <div class="pair">
+        <div class="f"><label for="f-permit">Permit number</label><span class="hint">If you have it handy</span><input id="f-permit" name="permit"></div>
+        <div class="f"><label for="f-type">Site type</label>
+          <select id="f-type" name="site_type"><option>Transfer station</option><option>Treatment site</option><option>Metal recycler</option><option>Skip yard</option><option>Landfill</option><option>Household waste recycling centre</option><option>Other</option></select></div>
+      </div>
+      <div class="pair">
+        <div class="f"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
+        <div class="f"><label for="f-phone">Phone</label><span class="hint">Optional</span><input id="f-phone" name="phone" type="tel" autocomplete="tel"></div>
+      </div>
+      <div class="f"><label for="f-now">How are receipts handled today?</label><span class="hint">Paper tickets, a spreadsheet, another tool, not started…</span><textarea id="f-now" name="today"></textarea></div>
+      <label class="consent"><input id="f-consent" type="checkbox" required><span>You can contact me about Waste48 at the details above. We use them only to reply; ask once and we're gone.</span></label>
+      <div><button class="btn" type="submit" id="f-submit">Ask for a walk-through</button></div>
+      <p class="sent" id="f-sent" role="status">Your email app should have opened with the details filled in — send it and the team will reply. If it didn't, email hello@waste48.co.uk directly.</p>
+    </form>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <h2>The questions sites are asking.</h2>
+    <div class="qa">
+      <details open><summary>What is a waste tracking ID?</summary><p>The reference Defra issues when a receipt of waste is reported. One per movement. It is the site's proof that it recorded the load, and a carrier can quote it. Waste48 stores it against the load and only ever shows an ID Defra actually returned — "filed" means filed.</p></details>
+      <details><summary>Is it really 48 hours?</summary><p>The rule is the end of the second working day after the load arrives. Over a weekend that is longer than 48 hours; on a Thursday afternoon it can be shorter than you think. Waste48 runs the statutory clock, not a fixed 48 — the name is a reminder, not the rule.</p></details>
+      <details><summary>Can I just use Defra's spreadsheet?</summary><p>Yes. Defra provides a free receipt-of-waste template spreadsheet for sites that don't have API software — you download it, complete the mandatory fields, and upload it; you must use Defra's template, not your own, and a new one for each upload. It is on GOV.UK under <a href="https://www.gov.uk/guidance/report-receipt-of-waste" rel="noopener">Report receipt of waste</a>, section "Spreadsheet".</p><p>Where it stops being enough: nothing checks the rows before you upload, nothing tells you which load a rejection refers to, the waste tracking IDs come back separately from your records, and the working-day clock is yours to watch. Waste48 exists for the site that has tried that for a fortnight. If the template suits you, use it — that is an honest answer.</p></details>
+      <details><summary>Do I need my weighbridge connected?</summary><p>No. You need the weight and the reference on the receipt. Type it, or upload the export your weighbridge software already produces. Connecting the weighbridge directly is a later conversation; it is not needed to be compliant.</p></details>
+      <details><summary>Why would Defra reject a receipt?</summary><p>The commonest reasons: no carrier registration number, or hazardous waste with no consignment code. Both may be absent — but only with a reason stated on the receipt. Vera asks for the reason before the receipt can be sent, so the rejection never happens.</p></details>
+      <details><summary>Something turned up in a load that wasn't declared. Now what?</summary><p>Attach it to the load it most likely came from, photograph it, and amend the receipt within the correction window. Waste48 keeps the original and the correction together with the reason. Declaring what you found protects the site; the duty to describe the waste correctly sits with whoever sent it.</p></details>
+      <details><summary>Who is liable — the carrier or the site?</summary><p>From October 2026 the duty to report receipts sits with the receiving site. Carriers' own digital reporting duties begin in October 2027. Until then the site's receipt is the record — and it names the carrier.</p></details>
+      <details><summary>Is Waste48 "Defra approved"?</summary><p>There is no such thing as Defra approval of a provider, and we won't say there is. Waste48 is listed on GOV.UK's <em>Report receipt of waste: choose a software provider</em> page, which states that Defra has confirmed the listed providers meet the digital waste tracking requirements. The same page says buying software is at your own risk. Choose on evidence; ours is above.</p></details>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="row">
+      <strong style="font-size:20px;color:var(--ink)">Waste48</strong>
+      <ul>
+        <li><a href="mailto:hello@waste48.co.uk">hello@waste48.co.uk</a></li>
+        <li><a href="https://www.gov.uk/guidance/report-receipt-of-waste" rel="noopener">GOV.UK: report receipt of waste</a></li>
+        <li><a href="#privacy">Privacy</a></li>
+      </ul>
+    </div>
+    <div class="legal" id="privacy">
+      <p><strong>Privacy.</strong> If you write to us or use the form, we keep your name, site and contact details to reply and, if you ask for one, to arrange a walk-through. We do not sell or share them. Ask and we delete them. Full privacy notice and company details to follow here.</p>
+      <p>© 2026 Waste48. Company registration details will appear here on incorporation.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var f=document.getElementById('early-access');
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    if(!f.reportValidity()) return;
+    var v=function(id){return (document.getElementById(id).value||'').trim();};
+    var body=['Walk-through request from waste48.co.uk','','Name: '+v('f-name'),'Role: '+v('f-role'),'Site: '+v('f-site'),'Permit: '+v('f-permit'),'Site type: '+v('f-type'),'Email: '+v('f-email'),'Phone: '+v('f-phone'),'','Receipts today: '+v('f-now'),'','Consent to contact: yes'].join('\n');
+    window.location.href='mailto:hello@waste48.co.uk?subject='+encodeURIComponent('Walk-through request — '+v('f-site'))+'&body='+encodeURIComponent(body);
+    document.getElementById('f-sent').classList.add('show');
+  });
+})();
+</script>
+
+</body>
+</html>
